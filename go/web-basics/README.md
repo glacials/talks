@@ -4,7 +4,7 @@ This is my talk that introduces you to Go from the context of a web service
 architecture.
 
 The talk is built with Go's [`present`][present-cmd] tool, with an entrypoint of
-`main.slide`.
+`main.slide`. Each directory contains example code used in a slide.
 
 [present-cmd]: https://pkg.go.dev/golang.org/x/tools/cmd/present
 
