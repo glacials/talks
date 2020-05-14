@@ -27,7 +27,7 @@ click the margins of the slides to go back and forward.
 
 Depending on your screen width, parts of the previous and next slides may
 reveal too much for your tastes. You can fix this by increasing the font size
-of the page (Ctrl + or ⌘ +).
+of the page (Ctrl+ or ⌘+).
 
 For some slides, a Run button will appear in the bottom right of the code
 snippet. You can click this to run the code. For slides whose examples span
