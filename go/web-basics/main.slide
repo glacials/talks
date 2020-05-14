@@ -132,13 +132,13 @@ Run:
 
 ## type
 
-.play -edit type.go
+.play -edit type/main.go
 
 : Untyped string constant
 
 ## struct
 
-.play -edit struct.go
+.play -edit struct/main.go
 
 ## Interfaces
 - Interface is a type
