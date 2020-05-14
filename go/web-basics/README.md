@@ -10,7 +10,7 @@ The talk is built with Go's [`present`][present-cmd] tool, with an entrypoint of
 
 ## Running it yourself
 
-The talk requires Go to run.
+The talk requires Go to run and view.
 
 ```sh
 go install golang.org/x/tools/cmd/present
