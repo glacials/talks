@@ -14,14 +14,16 @@ The talk requires Go to run and view.
 
 ```sh
 go install golang.org/x/tools/cmd/present
-present
+present -notes
 ```
 
-Then open [localhost:3999][localhost] in your browser.
+Then open [localhost:3999/main.slide][localhost] in your browser. Press `n` to open
+slide notes in a new window.
 
-[localhost]: http://localhost:3999
+[localhost]: http://localhost:3999/main.slide
 
 ### Usage
+
 Use the arrow keys, enter, or space to navigate with the keyboard. You can also
 click the margins of the slides to go back and forward.
 
@@ -45,6 +47,7 @@ slideshow. In these slides, I've placed the command you should paste into your
 terminal in order to execute the demonstration.
 
 ### Editing
+
 See the documentation for the [`present`][present-pkg] package (not to be
 confused with the `present` command linked above) for details on the syntax of
 `.slide` files.

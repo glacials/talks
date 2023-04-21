@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/glacials/mainframe/talks/everyday-go/v4/interface/user"
+	"github.com/glacials/talks/go/web-basics/interface/user"
 )
 
 // main.go

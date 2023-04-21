@@ -8,19 +8,14 @@
 :   - Use the bathroom
 :   - Shut your window
 
-May 2020
 Tags: go
 Summary: An introduction to using Go to build web services.
 
-Ben Carlsson
-Senior Software Engineer, YourBase
+Benjamin Carlsson
+Principal Software Engineer, SunPower
 ben@twos.dev
 twos.dev
 @glcls
-
-: YourBase pitch:
-:   Ship code faster with consistency across all teams.
-:   A simplified build system and test accelerator for complex code bases.
 
 ## Handler basics
 .code -edit handler/main.go
@@ -76,8 +71,12 @@ Go has first class support for:
 .code -edit testing/person_test.go /\/\//,
 	go test ./...
 
+: Testing is dead simple, you just call the function you want to test.
+
 ## go fmt
 	vim gofmt/main.go
+
+: EXIT THE PRESENTATION AND RUN THIS COMMAND
 
 ## Exporting
 .play -edit exporting/person.go
@@ -92,32 +91,33 @@ Run:
 
 Open:
 
-.link http://localhost:6060/pkg/github.com/glacials/mainframe/talks/everyday-go/v4/doc/ localhost:6060
+.link http://localhost:6060/pkg/github.com/glacials/talks/go/web-basics/doc/ localhost:6060
 
 Run:
 
-	vim ~/go/src/github.com/glacials/mainframe/talks/everyday-go/v4/doc/person.go
+	vim ~/go/src/github.com/glacials/talks/go/web-basics/doc/person.go
 
 
 ## Packages and directories
 
-	~/
-	  go/  # $GOPATH
-	    src/
-	      golang.org/
-	        x/
-	          tools/
-	            playground/
-	              socket/
-	            present/
+	/path/to/my/project/
+		golang.org/
+			x/
+				tools/
+					playground/
+						socket/
+					present/
 
 	// main.go
 	import "golang.org/x/tools/playground/socket"
 
-: Mention $GOPATH.
+: A package is a directory
 : Packages can have subpackages.
 : Importing a package imports all files in it. Files are arbitrary division lines to help YOU.
-: This tool (`present`) itself imports golang.org/x/tools/playground/socket
+: ~All packages can be imported by others, no bundling process.
+: In other languages you might extract shared libraries to a common space; in Go you'll
+: often import a package directly from an application repo.
+: e.g. this tool (`present`) itself imports golang.org/x/tools/playground/socket
 
 ## Return values
 .play -edit return/main.go
@@ -125,7 +125,6 @@ Run:
 .link https://pkg.go.dev/os?tab=doc#Open os.Open
 .link https://pkg.go.dev/io?tab=doc#Reader io.Reader
 
-: Types come after the variable name in declarations.
 : Go is a strongly, statically typed language.
 : Mention io.Copy, io.Reader, io.Writer WITHOUT saying their names, to lead into interfaces.
 : io.Reader/Writer work on S3, files, network streams, stdout, etc.
@@ -134,6 +133,7 @@ Run:
 
 .play -edit type/main.go
 
+: Types come after the variable name in declarations.
 : Untyped string constant
 
 ## struct
@@ -175,6 +175,7 @@ Run:
 
 : Goroutines are cheap.
 : You can have hundreds of thousands on one box with no noticeable performance decrease.
+: Show that this program blocks by default, then write `go ` in front of `sendEmail()`.
 
 : Mention things built on top of them:
 : http.Handler,
@@ -188,7 +189,3 @@ Run:
 : - map[string]struct{}
 : - Generics
 : - iota
-
-: Ship code faster with consistency across all teams.
-
-: A simplified build system and test accelerator for complex code bases.
